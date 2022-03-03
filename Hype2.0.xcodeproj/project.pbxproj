@@ -17,6 +17,13 @@
 		3222B7B127CE98D300BD000F /* HypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B7B027CE98D300BD000F /* HypeController.swift */; };
 		3222B7B627CE992700BD000F /* HypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B7B527CE992700BD000F /* HypeListViewController.swift */; };
 		3222B7B927CE9A5B00BD000F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B7B827CE9A5B00BD000F /* DateFormatter.swift */; };
+		3222B82E27CFE6B500BD000F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B82D27CFE6B500BD000F /* User.swift */; };
+		3222B83027CFEBEE00BD000F /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B82F27CFEBEE00BD000F /* UserController.swift */; };
+		3222B83227CFF22A00BD000F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B83127CFF22A00BD000F /* SignUpViewController.swift */; };
+		3222B83527CFF65300BD000F /* HypeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3222B83327CFF65200BD000F /* HypeList.storyboard */; };
+		3222B84027D12CE300BD000F /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B83F27D12CE300BD000F /* PhotoPickerViewController.swift */; };
+		3222B84327D1449700BD000F /* PhotoPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3222B84127D1449600BD000F /* PhotoPicker.storyboard */; };
+		3222B84527D1456C00BD000F /* HypePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222B84427D1456C00BD000F /* HypePhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,13 @@
 		3222B7B027CE98D300BD000F /* HypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeController.swift; sourceTree = "<group>"; };
 		3222B7B527CE992700BD000F /* HypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeListViewController.swift; sourceTree = "<group>"; };
 		3222B7B827CE9A5B00BD000F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		3222B82D27CFE6B500BD000F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3222B82F27CFEBEE00BD000F /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		3222B83127CFF22A00BD000F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3222B83427CFF65300BD000F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hype2.0/Storyboards/Base.lproj/HypeList.storyboard; sourceTree = "<group>"; };
+		3222B83F27D12CE300BD000F /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		3222B84227D1449600BD000F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hype2.0/Storyboards/Base.lproj/PhotoPicker.storyboard; sourceTree = "<group>"; };
+		3222B84427D1456C00BD000F /* HypePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypePhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,8 @@
 		3222B7AC27CE988800BD000F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3222B84127D1449600BD000F /* PhotoPicker.storyboard */,
+				3222B83327CFF65200BD000F /* HypeList.storyboard */,
 				3222B79927CE97E600BD000F /* Main.storyboard */,
 				3222B79E27CE97E900BD000F /* LaunchScreen.storyboard */,
 			);
@@ -109,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3222B7AD27CE98B200BD000F /* Hype.swift */,
+				3222B82D27CFE6B500BD000F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3222B7B027CE98D300BD000F /* HypeController.swift */,
+				3222B82F27CFEBEE00BD000F /* UserController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -134,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				3222B7B527CE992700BD000F /* HypeListViewController.swift */,
+				3222B83127CFF22A00BD000F /* SignUpViewController.swift */,
+				3222B83F27D12CE300BD000F /* PhotoPickerViewController.swift */,
+				3222B84427D1456C00BD000F /* HypePhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -204,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3222B83527CFF65300BD000F /* HypeList.storyboard in Resources */,
+				3222B84327D1449700BD000F /* PhotoPicker.storyboard in Resources */,
 				3222B7A027CE97E900BD000F /* LaunchScreen.storyboard in Resources */,
 				3222B79D27CE97E900BD000F /* Assets.xcassets in Resources */,
 				3222B79B27CE97E600BD000F /* Main.storyboard in Resources */,
@@ -219,10 +242,15 @@
 			files = (
 				3222B7B927CE9A5B00BD000F /* DateFormatter.swift in Sources */,
 				3222B79427CE97E600BD000F /* AppDelegate.swift in Sources */,
+				3222B83027CFEBEE00BD000F /* UserController.swift in Sources */,
 				3222B7B127CE98D300BD000F /* HypeController.swift in Sources */,
 				3222B7B627CE992700BD000F /* HypeListViewController.swift in Sources */,
+				3222B84027D12CE300BD000F /* PhotoPickerViewController.swift in Sources */,
+				3222B84527D1456C00BD000F /* HypePhotoViewController.swift in Sources */,
 				3222B79627CE97E600BD000F /* SceneDelegate.swift in Sources */,
+				3222B83227CFF22A00BD000F /* SignUpViewController.swift in Sources */,
 				3222B7AE27CE98B200BD000F /* Hype.swift in Sources */,
+				3222B82E27CFE6B500BD000F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +271,22 @@
 				3222B79F27CE97E900BD000F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3222B83327CFF65200BD000F /* HypeList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3222B83427CFF65300BD000F /* Base */,
+			);
+			name = HypeList.storyboard;
+			sourceTree = "<group>";
+		};
+		3222B84127D1449600BD000F /* PhotoPicker.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3222B84227D1449600BD000F /* Base */,
+			);
+			name = PhotoPicker.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

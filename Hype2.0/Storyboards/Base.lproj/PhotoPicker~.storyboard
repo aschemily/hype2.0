@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="width" secondItem="YK2-hT-Yrx" secondAttribute="height" multiplier="1:1" id="zCY-N9-37p"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="XZV-97-urL" kind="embed" identifier="photoPickerVC" id="HIo-R1-Sep"/>
+                                    <segue destination="ll3-kV-WwF" kind="embed" identifier="photoPickerVC" id="HIo-R1-Sep"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -85,11 +85,44 @@
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="-633.48214285714278"/>
         </scene>
-        <!--PhotoPicker-->
-        <scene sceneID="dy1-oe-JGM">
+        <!--Photo Picker View Controller-->
+        <scene sceneID="pkz-AM-uuj">
             <objects>
-                <viewControllerPlaceholder storyboardName="PhotoPicker" id="XZV-97-urL" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kty-jx-Wfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="ll3-kV-WwF" customClass="PhotoPickerViewController" customModule="Hype2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pd5-OO-Ele">
+                        <rect key="frame" x="0.0" y="0.0" width="183" height="183"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lw-Wr-GYu">
+                                <rect key="frame" x="0.0" y="0.0" width="183" height="183"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXi-rx-Y7u">
+                                <rect key="frame" x="16" y="44" width="151" height="139"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="selectPhotoButtonTapped:" destination="ll3-kV-WwF" eventType="touchUpInside" id="Ff4-9N-9eP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Lw-Wr-GYu" firstAttribute="leading" secondItem="Pd5-OO-Ele" secondAttribute="leading" id="1Pd-OJ-Qq9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TXi-rx-Y7u" secondAttribute="trailing" id="3PL-BA-pVm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TXi-rx-Y7u" secondAttribute="bottom" id="9IK-2h-ECX"/>
+                            <constraint firstItem="TXi-rx-Y7u" firstAttribute="top" secondItem="Pd5-OO-Ele" secondAttribute="topMargin" id="BK9-N9-OUW"/>
+                            <constraint firstAttribute="trailing" secondItem="8Lw-Wr-GYu" secondAttribute="trailing" id="H5P-XQ-2Aw"/>
+                            <constraint firstItem="TXi-rx-Y7u" firstAttribute="leading" secondItem="Pd5-OO-Ele" secondAttribute="leadingMargin" id="IoO-bV-kco"/>
+                            <constraint firstItem="8Lw-Wr-GYu" firstAttribute="top" secondItem="Pd5-OO-Ele" secondAttribute="top" id="KoU-yx-uSx"/>
+                            <constraint firstAttribute="bottom" secondItem="8Lw-Wr-GYu" secondAttribute="bottom" id="NSO-ql-xbr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="8Lw-Wr-GYu" id="eTe-MV-lsa"/>
+                        <outlet property="selectPhotoButton" destination="TXi-rx-Y7u" id="2QV-0O-F36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCS-GU-HFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="692" y="-819"/>
         </scene>

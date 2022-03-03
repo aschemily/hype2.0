@@ -5,8 +5,7 @@
 //  Created by Emily Asch on 3/1/22.
 //
 
-import Foundation
-
+import UIKit
 import CloudKit
 
 class HypeController {
@@ -22,9 +21,11 @@ class HypeController {
     //MARK: CRUD
     
     //create
-    func saveHype(with text: String, completion: @escaping(Bool)-> Void){
+    func saveHype(with text: String, photo: UIImage?, completion: @escaping(Bool)-> Void){
+        guard let currentUser = UserController.shared.currentUser else {completion(false) ; return}
+        let reference = CKRecord.Reference(recordID: currentUser.recordID, action: .none)
         //init hype object
-        let newHype = Hype(body: text)
+        let newHype = Hype(body: text, hypePhoto: photo, userReference: reference)
         //package the newHype in a CKRecord
         let hypeRecord = CKRecord(hype: newHype)
         //saving hypeRecord to the cloud
@@ -73,6 +74,7 @@ class HypeController {
     }
     
     func update(_ hype: Hype, completion: @escaping(Bool) -> Void){
+        guard hype.userReference?.recordID == UserController.shared.currentUser?.recordID else {completion(false) ; return}
       //step 3: define records to be updated
         let recordToUpdate = CKRecord(hype: hype)
         //step 2 - create requisite operation
@@ -101,6 +103,7 @@ class HypeController {
     }
     
     func delete(_ hype: Hype, completion: @escaping (Bool)-> Void){
+        guard hype.userReference?.recordID == UserController.shared.currentUser?.recordID else {completion(false) ; return}
         //step 2 - declared operation
         let operation = CKModifyRecordsOperation(recordIDsToDelete: [hype.recordID])
         //step 3- set the properties on the operation
